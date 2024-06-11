@@ -1,0 +1,49 @@
+{% load static %}
+{% block content %}
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="{% static 'img/logo.png' %}" alt="Logo" />
+    </div>
+    <div class="icerik">
+      <ul>
+        <li>
+          <a href="#">Anasayfa</a>
+        </li>
+        <li>
+          <a href="#">Cilt</a>
+        </li>
+        <li>
+          <a href="#">Göz</a>
+        </li>
+        <li>
+          <a href="#">Dudak</a>
+        </li>
+        <li>
+          <a href="#">Fırçalar</a>
+        </li>
+        <li>
+          <a href="#">Setler</a>
+        </li>
+        <li>
+          <a href="#">İletişim</a>
+        </li>
+      </ul>
+    </div>
+    <div class="orta-kısım">
+      <i class="fa-solid fa-user"></i>
+      <i class="fa-solid fa-heart"></i>
+      <i class="fa-brands fa-shopify"></i>
+    </div>
+    <div class="search">
+      <input type="search" id="search-input" placeholder="Ara..." />
+      <button id="search-button">Ara</button>
+    </div>
+    <div class="sag-taraf">
+      <button id="dark-mode-toggle">Dark Mod</button>
+    </div>
+  </div>
+
+  <!-- Arama sonuçlarını göstermek için bir bölüm -->
+  <div id="search-results" class="search-results"></div>
+{% endblock %}
