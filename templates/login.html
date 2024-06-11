@@ -1,21 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="container">
-            <form class="login-form">
-                <h2>Giriş Yap</h2>
-                <input type="email" placeholder="E-posta">
-                <input type="password" placeholder="Şifre">
-                <button type="submit">Giriş Yap</button>
-                <p class="register-link">Hesabınız yok mu? <a
-                        href="register.html">Kayıt olun</a></p>
-            </form>
-        </div>
-    </body>
-</html>
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+  {% include 'includes/_navbar.html' %}
+
+  <div class="container">
+    <form method="post" class="login-form">
+      <h2>Giriş Yap</h2>
+      {% csrf_token %}
+
+      {{ form.as_p }}
+      <button type="submit">Giriş Yap</button>
+      <p class="register-link">
+        Hesabınız yok mu? <a href="{% url 'register' %}">Kayıt olun</a>
+      </p>
+    </form>
+  </div>
+{% endblock %}

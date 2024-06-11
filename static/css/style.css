@@ -242,7 +242,7 @@ body.dark-mode #dark-mode-toggle {
 
 .product-image {
     width: 100%;
-    height: 200px;
+    height: auto;
     /* Kartın yüksekliğini ayarlamak için sabit bir değer */
     object-fit: cover;
     /* Resmi kartın boyutlarına göre orantılı olarak kırpmak */

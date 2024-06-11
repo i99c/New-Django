@@ -1,17 +1,16 @@
-{% extends 'index.html' %}
-{% block content %}
+<div class="product-container">
   {% for product in products %}
     <div class="product-card">
       <img src="{{ product.image_url }}" alt="{{ product.name }}" class="product-image" />
       <div class="product-info">
         <h2 class="product-title">{{ product.name }}</h2>
         <p class="product-description">{{ product.description }}</p>
-        <div class="product-price-and-favorite">
-          <p class="product-price">₺{{ product.price }}</p>
-          <button class="add-to-favorite"><i class="fa-regular fa-heart"></i></button>
+        <p class="product-price">₺{{ product.price }}</p>
+        <div class="product-buttons">
+          <button class="add-to-favorite"><i class="far fa-heart"></i></button>
           <button class="add-to-cart-button">Sepete Ekle</button>
         </div>
       </div>
     </div>
   {% endfor %}
-{% endblock %}
+</div>

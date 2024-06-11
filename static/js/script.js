@@ -102,13 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// footer
-
-// Add a submission event listener to the newsletter form
-document.querySelector('form').addEventListener('submit', function (event) {
-    event.preventDefault();
-    alert('Thank you for subscribing to our newsletter!');
-});
 
 // yukarı ok
 function scrollToChat() {
