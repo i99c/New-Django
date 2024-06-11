@@ -8,10 +8,10 @@
     <div class="icerik">
       <ul>
         <li>
-          <a href="#">Anasayfa</a>
+          <a href="{% url 'index' %}">Anasayfa</a>
         </li>
         <li>
-          <a href="#">Cilt</a>
+          <a href="{% url 'cilt' %}">Cilt</a>
         </li>
         <li>
           <a href="#">Göz</a>
@@ -31,7 +31,7 @@
       </ul>
     </div>
     <div class="orta-kısım">
-      <i class="fa-solid fa-user"></i>
+      <i class="fa-solid fa-user"><a href="{% url 'login' %}"></a></i>
       <i class="fa-solid fa-heart"></i>
       <i class="fa-brands fa-shopify"></i>
     </div>

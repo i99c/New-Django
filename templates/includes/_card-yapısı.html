@@ -1,36 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Card Yapısı</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-
-        <!-- Card Yapısı -->
-        <div class="product-card">
-            <img
-                src="https://via.placeholder.com/300x300.png?text=Product+Image"
-                alt="Product Image" class="product-image">
-            <div class="product-info">
-                <h2 class="product-title">Ürün Adı</h2>
-                <p class="product-description">Bu, ürünün kısa bir
-                    açıklamasıdır. Cilt tonunuza uygun çeşitli tonlarda
-                    mevcuttur.</p>
-                <div class="product-price-and-favorite">
-                    <p class="product-price">₺99.99</p>
-                    <button class="add-to-favorite"><i
-                            class="fa-regular fa-heart"></i>
-                    </button>
-                    <button class="add-to-cart-button">Sepete Ekle</button>
-                </div>
-            </div>
+{% extends 'index.html' %}
+{% block content %}
+  {% for product in products %}
+    <div class="product-card">
+      <img src="{{ product.image_url }}" alt="{{ product.name }}" class="product-image" />
+      <div class="product-info">
+        <h2 class="product-title">{{ product.name }}</h2>
+        <p class="product-description">{{ product.description }}</p>
+        <div class="product-price-and-favorite">
+          <p class="product-price">₺{{ product.price }}</p>
+          <button class="add-to-favorite"><i class="fa-regular fa-heart"></i></button>
+          <button class="add-to-cart-button">Sepete Ekle</button>
         </div>
-
-        <!-- Card Yapısı -->
-        <script src="https://kit.fontawesome.com/767955e4cb.js"
-            crossorigin="anonymous">
-        </script> <script src="script.js"></script>
-    </body>
-</html>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}
